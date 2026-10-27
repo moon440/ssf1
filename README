@@ -34,6 +34,7 @@ WHAT IS HERE
                   logic: character move tables, menus, hit detection.
   tools/          build-singlefile.mjs -- makes the one-file bundle.
   docs/NOTES.md   recovery method, fidelity report, known losses.
+  KNOWN_BUGS      documented defects, causes found in the sources.
   INSTALL         how to get the game running from this repo.
   ChangeLog       history of the recovery.
   COPYING         AGPL v3. Read it.

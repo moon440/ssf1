@@ -1,0 +1,62 @@
+KNOWN BUGS
+==========
+
+KB-1  character-select pins: hit point offset from the visible pin
+--------------------------------------------------------------
+Where:  VS mode and every menu using the red/blue player chips
+        (character select, mode select).
+Seen:   to drop a pin on a portrait, the cursor must sit slightly
+        down/left of where the pin appears to point; effective click
+        area sometimes feels further out than the drawn pin.
+
+Status: UNCORRECTED, cause identified in the original 2006 code.
+        Do not "fix" in the emulator; see options below.
+
+Cause (from recovered sources, frame_318/PlaceObject2_251_player1_chip_*):
+
+    on(press):    this.startDrag(true, 0, 0, 700, 400);
+    on(release):  this.stopDrag(); detect();
+    detect():     if (this.center.hitTest(_parent.blade)) { ...select... }
+
+Two 2006 design decisions combine:
+
+1. startDrag lockCenter=true -- while dragging, the mouse holds the
+   chip's registration point, not the visible pin tip. If the pin
+   graphic is drawn offset from its registration point (it is; the
+   ball slider in the same screen uses a y=-6.5 offset line, same
+   authoring habit), the cursor is never "on" the drawn tip.
+
+2. The drop test is `this.center.hitTest(portrait)` -- only a child
+   clip named `center` counts, not the whole pin. Its position inside
+   the chip symbol determines where a portrait actually registers.
+   Wherever `center` sits relative to the drawn tip IS the click
+   offset you feel.
+
+So the offset is faithful original behavior, not a Ruffle bug. It
+would have behaved the same on Flash Player 8.
+
+LibreWolf note: privacy.resistFingerprinting=true rounds pointer
+coordinates (~2px) and clamps devicePixelRatio. It cannot create a
+large consistent offset, but it can make edge cases feel worse.
+Cross-check: same page at zoom 100% in a stock Firefox/Chromium --
+if the offset persists identically (expected), it is KB-1 as
+described; if it changes with zoom, that is a separate Ruffle
+scaling bug worth reporting upstream.
+
+Fix options, in risk order:
+  a) accept it (it is authentic 2006 behavior; keyboard select works
+     fine and was the primary path anyway);
+  b) SWF surgery: open symbol 251/254 in FFDec, move the `center`
+     child onto the visible pin tip, save. This is a real fix but it
+     edits a binary the whole bundle embeds -- every consumer of
+     SuperSmash.swf changes, and FFDec round-trips carry corruption
+     risk. Deliberately NOT done here; the author said fix only what
+     you are sure of, and "sure of the cause" is not "sure of the
+     edit". Revisit with a diff-test: patched vs original bundle,
+     both played to character select, before shipping anything.
+
+KB-2  dead external calls on title/menu screens
+----------------------------------------------
+MochiBot bootstrap (frame_6) and getURL() links to retired 2006
+forums/armorgames. Harmless in Ruffle (no-op), left as recovered.
+See docs/NOTES.md in the source repo.
