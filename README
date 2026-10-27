@@ -19,8 +19,8 @@ PLAY / DOWNLOAD
 The author hosts the built single-file bundle (48 MB, everything
 embedded, no network needed after download):
 
-    play:      https://newsgood.neocities.org/SuperSmash/
-    download:  https://newsgood.neocities.org/download.html
+    play:      https://newsgood.neocities.org/SuperSmash
+    download:  https://newsgood.neocities.org/download
     source:    https://github.com/moon440/ssf1
 
 The bundle itself stays out of git (it embeds third-party characters;

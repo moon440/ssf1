@@ -4,7 +4,7 @@ HOSTING NOTES
 Layout on neocities (newsgood):
 
     SuperSmash/index.html   the 48 MB single-file bundle (play URL)
-    download.html           the download/landing page (site/download.html)
+    download                the download/landing page (site/download.html)
 
 The download link uses the same-origin `download` attribute, so
 clicking it saves the file instead of opening a second copy.
