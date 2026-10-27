@@ -14,6 +14,19 @@ The game shipped only as compiled .swf. The original project files were
 lost. Flash died in 2021. This is what survived, and the way back to a
 runnable build.
 
+PLAY / DOWNLOAD
+---------------
+The author hosts the built single-file bundle (48 MB, everything
+embedded, no network needed after download):
+
+    play:      https://newsgood.neocities.org/SuperSmash/
+    download:  https://newsgood.neocities.org/download.html
+    source:    https://github.com/moon440/ssf1
+
+The bundle itself stays out of git (it embeds third-party characters;
+see docs/NOTES.md). site/download.html is the page served from the
+host, kept here so the whole setup is reproducible.
+
 WHAT IS HERE
 ------------
   scripts/        5,298 recovered ActionScript files, laid out by SWF
