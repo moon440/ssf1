@@ -24,7 +24,11 @@ const html = `<!doctype html>
 <style>
   html,body{margin:0;height:100%;background:#111;color:#eee;font:14px/1.4 system-ui,sans-serif}
   #wrap{display:flex;align-items:center;justify-content:center;height:100%}
-  ruffle-player{width:100%;height:100%;max-width:1200px;max-height:900px}
+  /* Keep the player box at the stage's own aspect ratio: a letterboxed
+     canvas plus a fingerprint-resistance-clamped devicePixelRatio
+     (LibreWolf) is the usual source of click-offset in embedded
+     Ruffle builds. No stretching, no internal letterbox, no drift. */
+  ruffle-player{aspect-ratio:7/4;width:min(100vw,calc(100vh*7/4));height:auto;max-width:1200px}
   #boot{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#111}
   #boot.hidden{display:none}
 </style>

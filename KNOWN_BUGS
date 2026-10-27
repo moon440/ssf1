@@ -60,3 +60,25 @@ KB-2  dead external calls on title/menu screens
 MochiBot bootstrap (frame_6) and getURL() links to retired 2006
 forums/armorgames. Harmless in Ruffle (no-op), left as recovered.
 See docs/NOTES.md in the source repo.
+
+KB-1b  the offset is BIGGER in the HTML bundle than in the raw SWF
+--------------------------------------------------------------
+Confirmed stage geometry: 700 x 400 px, 7:4, 30 fps (SWF header).
+The first bundle builds stretched the player to width/height 100% --
+a non-7:4 window made Ruffle letterbox internally, and the mouse to
+stage transform across the letterbox is exactly where click offsets
+live. On top of that, LibreWolf's privacy.resistFingerprinting
+clamps devicePixelRatio to 1, its own known source of coordinate
+drift on scaled displays.
+
+Fixed in tools/build-singlefile.mjs: the player box now keeps the
+stage's own 7:4 aspect ratio, so there is no internal letterbox to
+mis-map through. Rebuild and replace the hosted copy. If a small
+offset remains after that, it is KB-1 (the authentic 2006
+center.hitTest behavior) and stays.
+
+Quick differential test:
+  1. raw .swf in desktop Ruffle        -> offset? = KB-1, original.
+  2. bundle in stock Firefox/Chromium  -> gone? = it was the CSS.
+  3. only in LibreWolf                 -> resistFingerprinting; try
+     privacy.resistFingerprinting=false for the site.
