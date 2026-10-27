@@ -1,0 +1,10 @@
+stage.startmusic1 = "mariosong";
+stage.setgameto = setgameto;
+displaynames = false;
+p2lives = 0;
+p3lives = 0;
+p4lives = 0;
+itemchance = 0.25;
+currentlevel = "smw";
+minutes = 5;
+stop();

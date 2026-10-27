@@ -1,0 +1,10 @@
+stage.startmusic1 = "temple";
+setgameto = "1v31";
+stage.setgameto = setgameto;
+p2lives = 2;
+p3lives = 1;
+p4lives = 1;
+itemchance = 0.25;
+currentlevel = "hyruleadventure";
+minutes = 5;
+stop();

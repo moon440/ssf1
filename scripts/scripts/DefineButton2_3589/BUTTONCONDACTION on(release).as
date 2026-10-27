@@ -1,0 +1,5 @@
+on(release){
+   music = false;
+   bgmusic.stop();
+   gotoAndStop("hyrule2");
+}

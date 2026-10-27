@@ -1,0 +1,41 @@
+SUPER SMASH FLASH (2006) -- SOURCE PRESERVATION
+================================================
+
+This repository holds the recovered ActionScript sources of the original
+Super Smash Flash, the 2006 Flash game, together with the toolchain used
+to recover them and to rebuild a single-file browser bundle.
+
+It does NOT contain the .swf, its sprites, its sounds, or any Nintendo
+material. You must supply the game file yourself. See INSTALL.
+
+WHY
+---
+The game shipped only as compiled .swf. The original project files were
+lost. Flash died in 2021. This is what survived, and the way back to a
+runnable build.
+
+WHAT IS HERE
+------------
+  scripts/        5,298 recovered ActionScript files, laid out by SWF
+                  tag (DefineSprite_NNN/frame_N/...). This is the game
+                  logic: character move tables, menus, hit detection.
+  tools/          build-singlefile.mjs -- makes the one-file bundle.
+  docs/NOTES.md   recovery method, fidelity report, known losses.
+  INSTALL         how to get the game running from this repo.
+  ChangeLog       history of the recovery.
+  COPYING         AGPL v3. Read it.
+
+FIDELITY
+--------
+AVM1 keeps identifiers in the constant pool, so names survive: what you
+read here is close to what was typed in 2006. Gone forever: comments,
+whitespace, the .fla timeline, layer names, and folder organisation.
+Expect `var` hoisting and decompiler idiom in place of author style.
+See docs/NOTES.md before complaining about a specific file.
+
+LICENSE
+-------
+Recovered sources and tools: AGPL-3.0-only, see COPYING.
+This covers the code in this repository. It does not and cannot cover
+third-party characters, music, or names. Do not ask this license to
+carry what it cannot. -- The author, 2026.

@@ -1,0 +1,29 @@
+INSTALL
+=======
+
+You need: a 2006-era SuperSmash.swf (the author archived it on
+archive.org, item `supersmashflash_swf`), Node.js >= 18, and a browser
+with WebAssembly. That is all. No npm install, no build server.
+
+1. Put SuperSmash.swf next to this file (it is .gitignored on purpose).
+
+2. Get Ruffle (MIT/Apache, upstream https://github.com/ruffle-rs):
+   download the `web-selfhosted` zip from a release, unpack into
+   ./ruffle/ so you have ruffle.js and the two *_bg.*.wasm files.
+
+3. Build the bundle:
+
+       node tools/build-singlefile.mjs
+
+   Output: ssf1.html, roughly 48 MB, everything embedded. Open it in
+   any modern browser, from disk, no server, no network. It works by
+   answering Ruffle's wasm fetches from blobs built out of base64
+   payloads baked into the page.
+
+4. Or run it the boring way: drop SuperSmash.swf onto any page with
+   Ruffle's loader, or into the Ruffle desktop app, or online at
+   ruffle.rs demos with local upload.
+
+NOTHING IN STEP 3 LEAVES YOUR MACHINE. The bundle embeds the .swf, and
+the .swf embeds third-party characters. Keep the bundle private. This
+repo stays legal by not containing it.

@@ -1,0 +1,131 @@
+setgameto = "ffa";
+stage.startmusic1 = "temple";
+stage.setgameto = setgameto;
+displaynames = false;
+p2lives = 1;
+p3lives = 0;
+p4lives = 0;
+itemchance = 0.25;
+currentlevel = "classic4";
+minutes = 5;
+player2.exist = true;
+player3.exist = false;
+player4.exist = false;
+randchar = Math.round(Math.random() * 2) + 1;
+if(randchar == 1)
+{
+   player2.exist = true;
+   player2character = "zelda";
+   player2.maxmove = 16;
+   player2.maxjump = -16;
+   player2.jumpdamage = 0;
+   player2.turnaround = 17;
+   player2.recoveryrate = 8;
+   player2.smash = 4;
+   player2.normal = 5;
+   player2.air = 4;
+   player2.revdamage = 5;
+   player2.revspeed = 0;
+   player2.attackboost = 0;
+   player2.attackspace = 16;
+   player2.attacklength = 23;
+   player2.slow = 0.4;
+   player2.speedup = 0.5;
+   player2.speeddown = 1;
+   player2.jumptimes = 2;
+   jumpsound2 = player2character + "1";
+   anormal2 = player2character + "2";
+   shoot2 = player2character + "3";
+   aforward2 = player2character + "4";
+   turn2 = player2character + "5";
+   aup2 = player2character + "6";
+   adown2 = player2character + "7";
+}
+else if(randchar == 2)
+{
+   player2.exist = true;
+   player2character = "link";
+   player2.maxmove = 18;
+   player2.maxjump = -15;
+   player2.jumpdamage = 0;
+   player2.turnaround = 19;
+   player2.recoveryrate = 8;
+   player2.smash = 3;
+   player2.normal = 3;
+   player2.air = 4;
+   player2.revdamage = 5;
+   player2.revspeed = 0;
+   player2.attackboost = 0;
+   player2.attackspace = 20;
+   player2.attacklength = 15;
+   player2.slow = 0.3;
+   player2.speedup = 0.6;
+   player2.speeddown = 1;
+   player2.jumptimes = 2;
+   jumpsound2 = player2character + "1";
+   anormal2 = player2character + "2";
+   shoot2 = player2character + "3";
+   aforward2 = player2character + "4";
+   turn2 = player2character + "5";
+   aup2 = player2character + "6";
+   adown2 = player2character + "7";
+}
+else if(randchar == 3 and _root.savedata.data.records.younglink[0] == true)
+{
+   player2.exist = true;
+   player2character = "younglink";
+   player2.maxmove = 18;
+   player2.maxjump = -15;
+   player2.jumpdamage = 0;
+   player2.turnaround = 19;
+   player2.recoveryrate = 8;
+   player2.smash = 3;
+   player2.normal = 3;
+   player2.air = 4;
+   player2.revdamage = 3;
+   player2.revspeed = 0;
+   player2.attackboost = 0;
+   player2.attackspace = 15;
+   player2.attacklength = 15;
+   player2.slow = 0.5;
+   player2.speedup = 0.58;
+   player2.speeddown = 1;
+   player2.jumptimes = 2;
+   jumpsound2 = player2character + "1";
+   anormal2 = player2character + "2";
+   shoot2 = player2character + "3";
+   aforward2 = player2character + "4";
+   turn2 = player2character + "5";
+   aup2 = player2character + "6";
+   adown2 = player2character + "7";
+}
+else
+{
+   player2.exist = true;
+   player2character = "link";
+   player2.maxmove = 18;
+   player2.maxjump = -15;
+   player2.jumpdamage = 0;
+   player2.turnaround = 19;
+   player2.recoveryrate = 8;
+   player2.smash = 3;
+   player2.normal = 3;
+   player2.air = 4;
+   player2.revdamage = 5;
+   player2.revspeed = 0;
+   player2.attackboost = 0;
+   player2.attackspace = 20;
+   player2.attacklength = 15;
+   player2.slow = 0.3;
+   player2.speedup = 0.6;
+   player2.speeddown = 1;
+   player2.jumptimes = 2;
+   jumpsound2 = player2character + "1";
+   anormal2 = player2character + "2";
+   shoot2 = player2character + "3";
+   aforward2 = player2character + "4";
+   turn2 = player2character + "5";
+   aup2 = player2character + "6";
+   adown2 = player2character + "7";
+}
+stop();

@@ -1,0 +1,10 @@
+stage.startmusic1 = "mariosong";
+setgameto = "1v31";
+stage.setgameto = setgameto;
+p2lives = 1;
+p3lives = 1;
+p4lives = 0;
+itemchance = 0.5;
+currentlevel = "peachcastle";
+minutes = 5;
+stop();

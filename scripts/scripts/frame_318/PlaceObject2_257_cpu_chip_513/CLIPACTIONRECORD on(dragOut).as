@@ -1,0 +1,3 @@
+on(dragOut){
+   this.stopDrag();
+}

@@ -1,0 +1,11 @@
+stage.startmusic1 = "allstarmusic";
+stage.setgameto = setgameto;
+player2.exist = false;
+player3.exist = false;
+p2lives = 0;
+p3lives = 0;
+p4lives = 0;
+itemchance = 0;
+currentlevel = "island";
+minutes = 5;
+stop();

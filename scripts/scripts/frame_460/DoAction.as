@@ -1,0 +1,69 @@
+if(!music)
+{
+   music = true;
+   bgmusic.start(0,999);
+}
+_root.gamePercent();
+p1airamount = 0;
+p1smashamount = 0;
+p1attackamount = 0;
+p1normalamount = 0;
+p1dashamount = 0;
+p1maxdamage = 0;
+p1directionamount = 0;
+p1crouchamount = 0;
+p1jumpamount = 0;
+p1crowdamount = 0;
+p1hurtamount = 0;
+p2airamount = 0;
+p2smashamount = 0;
+p2attackamount = 0;
+p2normalamount = 0;
+p2dashamount = 0;
+p2maxdamage = 0;
+p2directionamount = 0;
+p2crouchamount = 0;
+p2jumpamount = 0;
+p2crowdamount = 0;
+p2hurtamount = 0;
+p3airamount = 0;
+p3smashamount = 0;
+p3attackamount = 0;
+p3normalamount = 0;
+p3dashamount = 0;
+p3maxdamage = 0;
+p3directionamount = 0;
+p3crouchamount = 0;
+p3jumpamount = 0;
+p3crowdamount = 0;
+p3hurtamount = 0;
+p4airamount = 0;
+p4smashamount = 0;
+p4attackamount = 0;
+p4normalamount = 0;
+p4dashamount = 0;
+p4maxdamage = 0;
+p4directionamount = 0;
+p4crouchamount = 0;
+p4jumpamount = 0;
+p4crowdamount = 0;
+p4hurtamount = 0;
+choosechar = new Sound();
+choosechar.attachSound("Narrator_training");
+choosechar.start();
+slide1.ball._x = ball1x;
+slide2.ball._x = ball2x;
+slide3.ball._x = ball3x;
+slide4.ball._x = ball4x;
+onEnterFrame = function()
+{
+   if(usinglives)
+   {
+      matchtype = lives + "-man survival test!";
+   }
+   else
+   {
+      matchtype = minutes + " minute KO fest!";
+   }
+};
+stop();

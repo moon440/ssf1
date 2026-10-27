@@ -1,0 +1,17 @@
+AUTHORS
+=======
+
+Super Smash Flash (2006): written, designed, and published by the
+maintainer of this repository, credited at the time as Clood 9 of
+McLeodGaming. Original .swf archived by the same at
+archive.org, item `supersmashflash_swf`.
+
+Source recovery, tooling, and this repository: same person, 2026,
+assisted by modern tools (JPEXS FFDec, Ruffle). The recovery method is
+documented in docs/NOTES.md so anyone can re-derive every file here
+from the original .swf.
+
+Nintendo, HAL Laboratory, Creatures Inc., GAME FREAK, APE Inc., Disney,
+Square Enix, Sega, Capcom, Sunrise, Namco, Studio Pierrot, Equinox
+Twilight: owners of the characters this game once drew. They are not
+authors of this repository and nothing here licenses their work.

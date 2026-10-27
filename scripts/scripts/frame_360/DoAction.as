@@ -1,0 +1,14 @@
+challenge.stop();
+itemchance = 0.25;
+setgameto = "ffa";
+player3.exist = false;
+player4.exist = false;
+stage.startmusic1 = "finaldestination";
+stage.setgameto = setgameto;
+player2.attackrange = 50;
+player2.jumprange = 150;
+player2.chanceattack = 1;
+player2.revchance = 0.25;
+player2.jumpchance = 0.35;
+player2.followchance = 1;
+stop();

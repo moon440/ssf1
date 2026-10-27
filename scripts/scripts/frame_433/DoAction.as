@@ -1,0 +1,15 @@
+player2.exist = true;
+player3.exist = true;
+player4.exist = true;
+player1.healthdivision = 24;
+player2.healthdivision = 14;
+player3.healthdivision = 14;
+player4.healthdivision = 14;
+totalscore = 0;
+p1lives = 1;
+p2lives = 0;
+p3lives = 0;
+p4lives = 0;
+itemchance = 0.25;
+timer = false;
+usinglives = true;

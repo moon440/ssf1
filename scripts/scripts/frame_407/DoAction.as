@@ -1,0 +1,13 @@
+stage.startmusic1 = "finaldestination";
+setgameto = "ffa";
+stage.setgameto = setgameto;
+player2.exist = false;
+player3.exist = false;
+player4.exist = false;
+p2lives = 0;
+p3lives = 0;
+p4lives = 0;
+itemchance = 0;
+currentlevel = "masterhand";
+minutes = 5;
+stop();

@@ -1,0 +1,17 @@
+2026-10-26  The author
+
+	* scripts/: first public release. 5,298 AVM1 script records
+	recovered from the 2006 SuperSmash.swf with JPEXS Free Flash
+	Decompiler 26.4.0 (`-export script`, zero errors, 1m44s).
+
+	* tools/build-singlefile.mjs: single-file browser bundle builder.
+	Embeds ruffle.js, both wasm cores (SIMD + baseline) and the game
+	as base64; a fetch shim answers Ruffle's wasm requests from
+	memory, so the output runs from file:// with no network.
+
+	* docs/NOTES.md: recovery method, fidelity report, the dead
+	MochiBot loader found during analysis, and what is NOT here and
+	why.
+
+	Sources and tools licensed AGPL-3.0-only. The .swf, its sprites
+	and its sounds are deliberately absent; see README and INSTALL.

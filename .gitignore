@@ -1,0 +1,9 @@
+# The game file and anything built from it stays off this repository.
+# See docs/NOTES.md before asking.
+*.swf
+ssf1.html
+ssf1-*.html
+ruffle/
+ffdec/
+*.wasm
+node_modules/

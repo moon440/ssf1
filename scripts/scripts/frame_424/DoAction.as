@@ -1,0 +1,12 @@
+stop();
+healthreset = 0;
+timer = true;
+waiting = false;
+setgameto = "1v31";
+stage.startmusic1 = "finaldestination";
+stage.setgameto = setgameto;
+displaynames = false;
+itemchance = 0.25;
+currentlevel = "allstarlev";
+minutes = 5;
+p1lives = 1;
